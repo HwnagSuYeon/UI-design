@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mysite</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<!-- link : 외부에서 소스를 가져오는 방식이다. -->
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|Noto+Serif+KR');
+		@import url('mysite.css');
+	/**/
+	</style>
+	<!-- script는 항상 style뒤에 온다! -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN-sIrbZW2AsRyEDvZBKtfuoxjNzY-QH8&callback=initMap"
+	type="text/javascript"></script>
+	<script type="text/javascript" src="gmap.js"></script>
+	
+	
+	<!-- 외부에있는 JS코드를 불러옴 -->
+</head>
+<body onload="initialize()">
+	<!-- onload="initialize()"=> 바디태그가 만들어질 때 initialize()를 불러오겠다. initialize()는 스크립트 함수로, 지도를 만드는 역할을 한다. 이벤트 발생시 객체(만들어진 지도)를 사용하는 것.-->
+	<!-- top button -->
+	<button id="topBtn">
+		<i class="fas fa-arrow-up"></i>
+	</button>
+
+	<!-- 화면 왼쪽 내용 -->
+	<aside>
+		<div class="side_wrap">
+			<div class="inner_side">
+				<div class="close_btn">
+					<i class="fas fa-angle-left"></i>
+				</div>
+				<div class="sheader">
+					<h1>Hwang<br>
+						SuYeon<br>
+						programmer</h1>
+				</div>
+				<div class="smenu">
+					<div class="inner_smenu">
+						<ul>
+							<li><a class="smenu_btn" href="#">Home</a></li>
+							<li><a class="smenu_btn" href="#aboutme">About Me</a></li>
+							<li><a class="smenu_btn" href="#profile">Profile</a></li>
+							<li><a class="smenu_btn" href="#skills">Skills</a></li>
+							<li><a class="smenu_btn" href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sfooter">
+					<div class="sns_wrap">
+						<a href="#" class="sns_btn">
+							<i class="fab fa-facebook-f"></i>	
+						</a>
+						<a href="#" class="sns_btn">
+							<i class="fab fa-google"></i>	
+						</a>
+						<a href="#" class="sns_btn">
+							<i class="fab fa-instagram"></i>	
+						</a>
+						<a href="#" class="sns_btn">
+							<i class="fab fa-youtube"></i>	
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</aside>
+	<!-- 화면 오른쪽 내용 -->
+	<section>
+		<!-- aboutme -->
+		<div class="content_wrap">
+			<div class="aboutme" id="aboutme">
+				<h2>
+					<b>About Me</b> <!-- 글씨 진하게 하는 태그 -->
+				</h2>
+				<div class="meImg_div"><img class="about_img" src="images/me.jpg" alt="ME"></div>
+				<div class="job_wrap">
+					<img class="my_name" src="images/hwnag_logo.png">
+					<div>
+						<span class="type_web">Web</span>
+						<span class="type_spring">Spring</span>
+						<span class="type_devlop">Developer</span>
+					</div>
+				</div>
+			</div>
+			<!-- profile -->
+			<div class="profile_wrap">
+				<div class="profile" id="profile">
+					<h2><b>Profile</b></h2>
+				</div>
+				<div class="icon_wrap">
+					<!-- 이메일 -->
+					<div class="card">
+						<div class="layer"></div>
+						<div class="content">
+							<div class="image">
+								<i class="fas fa-envelope-open-text"></i>
+							</div>
+							<div class="details">
+								<h2>
+									email<br>
+									<span>h_yeon1023@naver.com</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<!-- 거주장소 -->
+					<div class="card">
+						<div class="layer"></div>
+						<div class="content">
+							<div class="image">
+								<i class="fas fa-map-marker-alt"></i>
+							</div>
+							<div class="details">
+								<h2>
+									Residence<br> location<br>
+									<span>Gwangju, KOREA</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<!-- 핸드폰번호 -->
+					<div class="card">
+						<div class="layer"></div>
+						<div class="content">
+							<div class="image">
+								<i class="fas fa-mobile-alt"></i>
+							</div>
+							<div class="details">
+								<h2>
+									Phone Number<br>
+									<span>010-3901-9647</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<!-- 학사 -->
+					<div class="card">
+						<div class="layer"></div>
+						<div class="content">
+							<div class="image">
+								<i class="fas fa-graduation-cap"></i>
+							</div>
+							<div class="details">
+								<h2>
+									Bachelor<br>
+									<span>Visual Design</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<!-- 전공 -->
+					<div class="card">
+						<div class="layer"></div>
+						<div class="content">
+							<div class="image">
+								<i class="fas fa-book"></i>
+							</div>
+							<div class="details">
+								<h2>
+									Major<br>
+									<span>Java, Spring, SQL</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<!-- 이력서 다운로드 -->
+					<div class="card">
+						<div class="layer"></div>
+						<div class="content">
+							<div class="image">
+								<i class="fas fa-download"></i>
+							</div>
+							<div class="details">
+								<h2>
+									Download<br> resume<br>
+								</h2>
+							</div>
+						</div>
+					</div>
+
+				
+				</div>
+			</div>
+				<!-- skills -->
+				<div class="skills" id="skills">
+					<h2><b>Technical Skills</b></h2>
+						<div class="skills_wrap">
+							<p>Programming(JAVA)</p>
+							<div class="whitebar">
+								<div class="slatebar" style="width: 60%;">60%</div>
+							</div>
+							<p>HTML, CSS</p>
+							<div class="whitebar">
+								<div class="slatebar" style="width: 30%;">30%</div>
+							</div>
+							<p>DataBase(Oracle)</p>
+							<div class="whitebar">
+								<div class="slatebar" style="width: 80%;">80%</div>
+							</div>
+							<p>SQL</p>
+
+							<div class="whitebar">
+								<div class="slatebar" style="width: 50%;">50%</div>
+							</div>
+						</div>
+				</div>
+
+
+
+					<!-- coneact -->
+					<div class="contact_wrap" id="contact">
+						<h2><b>Contact Me</b></h2>
+						<div class="inner_contact">
+							<div class="map" id="map_view" style="width: 100%; height: 400px;"></div>
+							<div class="contact">
+								<p>Do you want my programming skills?
+								   Fill out the from and fill me in with the details:)
+								   I love meeting new people!</p>
+								<div class="coninfo">
+									<label>Name</label>
+									<input type="text" name="">
+								</div>
+								<div class="coninfo">
+									<label>E-mail</label>
+									<input type="text" name="">
+								</div>
+								<div class="coninfo">
+									<label>Messege</label>
+									<input type="text" name="">
+								</div>
+								<button> <i class="fas fa-rocket"></i>Send</button>
+							</div>
+						</div>
+					</div>
+
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// alert('test');
+			$(window).scroll(function(){
+				var scrollValue = $(this).scrollTop();
+				if(scrollValue > 40) {
+					$('#topBtn').fadeIn();
+				} else {
+					$('#topBtn').fadeOut();
+				}
+			});
+
+			$('#topBtn').click(function(){
+				$('html, body').animate({scrollTop:0}, 100);
+			});
+
+			var state = false;
+			$('.close_btn').click(function(){
+				if (!state) {
+					$('.side_wrap').animate({left:'-300px'},300);
+					$('.content_wrap').css('padding-left','0');
+					$('.close_btn').html('<i class="fas fa-angle-right"></i>');
+					state = true;
+				} else {
+					$('.side_wrap').animate({left:'0px'},300);
+					$('.content_wrap').css('padding-left','300px');
+					$('.close_btn').html('<i class="fas fa-angle-left"></i>');
+					state = false;
+				}
+				
+			});
+		});
+	</script>
+</body>
+</html>
